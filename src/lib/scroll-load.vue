@@ -2,7 +2,7 @@
 * @Author: Zhang Guohua
 * @Date:   2020-04-29 16:06:14
 * @Last Modified by:   zgh
-* @Last Modified time: 2020-04-29 17:14:01
+* @Last Modified time: 2020-05-08 14:50:20
 * @Description: create by zgh
 * @GitHub: Savour Humor
 -->
@@ -39,8 +39,9 @@ export default {
 			return viewPortHeight + bottom
 		},
 		judgeShow () {
-			if (this.showBlock !== null) return this.showBlock
-			return this.show
+			const show = this.showBlock !== null ? this.showBlock : this.show
+			show && this.$emit('load')
+			return show
 		}
 	},
 	mounted () {
@@ -51,16 +52,16 @@ export default {
 			const vm = this
 			
 			if (!vm.ticking && !vm.judgeShow) {
-		    window.requestAnimationFrame(function() {
-		    	const offsetTop = vm.$refs.wrapper.offsetTop
-		    	const scrollTop = document.documentElement.scrollTop
-		    	if (offsetTop - scrollTop < vm.showHeight) {
-		    		vm.show = true
-		    	}
-		      vm.ticking = false
-		    })
-		  }
-		  vm.ticking = true;
+			    window.requestAnimationFrame(function() {
+			    	const offsetTop = vm.$refs.wrapper.offsetTop
+			    	const scrollTop = document.documentElement.scrollTop
+			    	if (offsetTop - scrollTop < vm.showHeight) {
+			    		vm.show = true
+			    	}
+			      	vm.ticking = false
+			    })
+		  	}
+		  	vm.ticking = true;
 		}
 	},
 	destoryed () {

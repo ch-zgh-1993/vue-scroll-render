@@ -1,7 +1,7 @@
 {
   "name": "vue-scroll-render",
   "description": "upload plugin",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "author": "zhangguohua <zhangguohua@shuidihuzhu.com>",
   "license": "MIT",
   "private": false,
@@ -36,10 +36,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/ch-zgh-1993/vue-plugins/tree/plugin-package"
+    "url": "https://github.com/ch-zgh-1993/vue-scroll-render"
   },
   "bugs": {
-    "url": "https://github.com/ch-zgh-1993/vue-plugins/issues"
+    "url": "https://github.com/ch-zgh-1993/vue-scroll-render/issues"
   },
-  "homepage": "https://github.com/ch-zgh-1993/vue-plugins/blob/plugin-package/README.md"
+  "homepage": "https://github.com/ch-zgh-1993/vue-scroll-render/blob/master/README.md"
 }

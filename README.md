@@ -1,3 +1,11 @@
+/*
+* @Author: Zhang Guohua
+* @Date:   2020-05-07 19:14:18
+* @Last Modified by:   zgh
+* @Last Modified time: 2020-05-08 14:53:15
+* @Description: create by zgh
+* @GitHub: Savour Humor
+*/
 # scroll-load
 
 适用于首屏内容过多时，对首屏暂时不出现在用户视野中的模块，进行延迟加载，从而减少首次渲染的内容，提高复杂情况下首屏渲染的速度。减少用户等待，同时也能降低服务端接口压力。
@@ -32,6 +40,14 @@ Vue.use(scrollLoad)
 
 ## 一些配置
 
+### 属性
+
 - showBlock <Boolean>：支持用户自己配置何时进行**延迟模块加载**，传入该参数即可。此时不会再监听页面的滚动。适用于弹窗类的，与滚动无关，用户自行定义加载节点。
 - bottom <Number>: 支持配置延迟模块距离可视窗口底部多少时，开始进行加载。默认为 100;
+
+
+### 事件
+
+- load: 在**延迟模块** 加载时，触发 load 钩子，通知用户进行自己需要的操作。
+
 
