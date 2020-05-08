@@ -1,11 +1,3 @@
-/*
-* @Author: Zhang Guohua
-* @Date:   2020-05-07 19:14:18
-* @Last Modified by:   zgh
-* @Last Modified time: 2020-05-08 14:53:15
-* @Description: create by zgh
-* @GitHub: Savour Humor
-*/
 # scroll-load
 
 适用于首屏内容过多时，对首屏暂时不出现在用户视野中的模块，进行延迟加载，从而减少首次渲染的内容，提高复杂情况下首屏渲染的速度。减少用户等待，同时也能降低服务端接口压力。
